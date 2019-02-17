@@ -52,9 +52,10 @@ a {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
+  justify-content: center;
 }
 .header-logo {
-  margin: 38px 0 0 19.8vw;
+  margin: 38px 0 0 0.9vw;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -104,4 +105,82 @@ a {
   background: url(../img/header/slider_bg.jpg) no-repeat;
   background-size: cover;
   background-position: top center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-content: stretch;
+  flex-wrap: wrap;
+  padding: 283px 0 0 0;
+  box-sizing: border-box;
+}
+.slider-control {
+  align-self: center;
+  display: block;
+  padding: 20px 20px 20px 20px;
+}
+.slider-arrow {
+  width: 50px;
+  height: 50px;
+  border-left: 2px solid #f3f3f3;
+  border-bottom: 2px solid #f3f3f3;
+}
+.slider-arrow-left {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.slider-arrow-right {
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  -ms-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+.slider-slogan {
+  align-self: center;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 77%;
+}
+.slider-slogan h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: #f3f3f3;
+  text-align: center;
+  margin: 0 0 0 0;
+}
+.slider-slogan span {
+  font-family: 'Raleway', sans-serif;
+  font-size: 52px;
+  font-weight: 700;
+  color: #f3f3f3;
+  text-align: center;
+}
+.slider-slogan p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #f3f3f3;
+  text-align: center;
+  width: 570px;
+}
+.slider-nav {
+  width: 100%;
+  align-self: flex-end;
+  text-align: center;
+}
+.slider-nav-link {
+  color: #f3f3f3;
 }
