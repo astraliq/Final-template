@@ -53,8 +53,73 @@ video {
 	outline: none;
 }
 
-header {
+a {
+	text-decoration: none;
+}
 
+
+.header {
+	margin: 0 auto;
+	position: absolute;
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	&-logo {
+		margin: 38px 0 0 19.8vw;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		&-img {
+			height: 60px;
+		}
+	}
+	&-name {
+		text-transform: capitalize;
+		display: block;
+		font-family: 'Raleway', sans-serif;
+		font-size: 34px;
+		color: @colorTextLight;
+		margin: 13px 0 0 0;
+	}
+	&-menu {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		list-style-type: none;
+		margin: 57px 0 0 11.2vw;
+		padding: 0;
+		&-li {
+			margin: 0 1.4vw 0 0;
+		}
+		&-li a {
+			color: @colorTextLight;
+			text-transform: capitalize;
+			font-size: 14px;
+			&:hover {
+				color: @color1;
+			}
+		}
+		&-li:nth-child(9),
+		&-li:nth-child(10) {
+			margin: 0 -10px 0 39px;
+		}
+	}
+}
+
+.slider {
+	margin: 0 auto;
+	min-height: 1024px;
+	width: 100%;
+	background: url(../img/header/slider_bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: top center;
 }
 
 
