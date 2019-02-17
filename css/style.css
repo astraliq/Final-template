@@ -184,3 +184,15 @@ a {
 .slider-nav-link {
   color: #f3f3f3;
 }
+.slider-btn {
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  background-color: #c7b299;
+  color: #f3f3f3;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border: none;
+  outline: none;
+}
