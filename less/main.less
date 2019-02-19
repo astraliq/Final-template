@@ -33,6 +33,7 @@
 
 * {
 	font-family: @font1;
+	outline: none;
 }
 
 html {
@@ -122,6 +123,7 @@ a {
 	margin: 0 auto;
 	min-height: 1024px;
 	width: 100%;
+	background-color: @colorBGimg;
 	background: url(../img/header/slider_bg.jpg) no-repeat;
 	background-size: cover;
 	background-position: top center;
@@ -139,7 +141,6 @@ a {
 	&-control {
 		align-self: center;
 		display: block;
-		padding: 20px 20px 20px 20px;
 	}
 	
 	&-arrow {
@@ -178,10 +179,11 @@ a {
 		width: 77%;
 		h2 {
 			.mixin_font(@font2; 36px; 400; @colorTextLight;);
-			margin: 0 0 0 0;
+			margin: 20px 0 10px 0;
 		}
 		span {
 			.mixin_font(@font2; 52px; 700; @colorTextLight;);
+			margin:  0 10px 0;
 		}
 		p {
 			.mixin_font(@font2; 16px; 300; @colorTextLight;);
@@ -192,23 +194,126 @@ a {
 	&-nav {
 		width: 100%;
 		align-self: flex-end;
-		text-align: center;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100px;
+		
 		&-link {
-			color: @colorTextLight;
+			display: block;
+			height: 10px;
+			width: 10px;
+			border-radius: 50%;
+			background-color: @colorBGimg;
+			margin: 0 5px;
+			box-sizing: border-box;
+			&:hover {
+				background-color: @colorBGimg;
+				border: 2px solid @color1;
+			}
 		}
 	}
 	&-btn {
-		height: 50px;
-		width: 200px;
+		display: block;
+		height: 53px;
+		width: 170px;
 		border-radius: 5px;
 		background-color: @color1;
 		color: @colorTextLight;
 		text-transform: uppercase;
 		font-family: @font1;
 		font-weight: 700;
-		border: none;
 		outline: none;
+		border-bottom: 4px solid #736357;
+		text-align: center;
+		padding: 16px 0 0 0;
+		margin: 30px 0 0 0;
+		box-sizing: border-box;
+		
+		&:hover {
+			background-color: darken(@color1, 20%);
+			color: darken(@colorTextLight, 20%);
+		}
+		
+		&:active {
+			transform: scale(.95);
+			transition: 0.2s;
+		}
 	}
 }
 
+.left-arrow {
+	padding: 50px 20px 50px 50px;
+}
 
+.right-arrow {
+	padding: 50px 50px 50px 20px;
+}
+
+.services {
+	min-height: 370px;
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	
+	&-icon {
+		fill: @colorTextDark;
+		stroke: @colorTextDark;
+	}
+	
+	&-block {
+		width: 285px;
+		min-height: 250px;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		margin: 0 10px 0 10px;
+		
+		h5 {
+			text-align: center;
+			font-family: @font2;
+			font-size: 22px;
+			font-weight: 700;
+			margin: 22px 0;
+		}
+		p {
+			text-align: center;
+			font-family: @font1;
+			font-size: 14px;
+			font-weight: 500;
+			line-height: 27px;
+		}
+		
+		&:hover h5 {
+			color: @color1;
+		}
+		
+		&:hover .services-icon {
+			fill: @color1;
+			stroke: @color1;
+		}
+		
+		&-line {
+			width: 70px;
+			margin: 0 auto;
+			border-bottom: 3px solid #f1eee9;
+		}
+		
+		&:hover .services-block-line {
+			border-bottom: 3px solid @color1;
+		}
+	}
+}
