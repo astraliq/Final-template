@@ -62,7 +62,6 @@ a {
 	text-decoration: none;
 }
 
-
 .header {
 	margin: 0 auto;
 	position: absolute;
@@ -80,8 +79,17 @@ a {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
+		
 		&-img {
-			height: 60px;
+			fill: @colorTextLight;
+			stroke: @colorTextLight;
+		}
+		
+		&:hover .header-name,
+		&:hover .header-logo-img {
+			fill: @color1;
+			stroke: @color1;
+			color: @color1
 		}
 	}
 	&-name {
@@ -103,13 +111,23 @@ a {
 		padding: 0;
 		&-li {
 			margin: 0 1.4vw 0 0;
+			&-icon {
+				fill: @colorTextLight;
+				stroke: @colorTextLight;
+			}
 		}
 		&-li a {
 			color: @colorTextLight;
 			text-transform: capitalize;
 			font-size: 14px;
+			
 			&:hover {
 				color: @color1;
+			}
+			
+			&:hover .header-menu-li-icon {
+				fill: @color1;
+				stroke: @color1;
 			}
 		}
 		&-li:nth-child(9),
@@ -141,6 +159,9 @@ a {
 	&-control {
 		align-self: center;
 		display: block;
+		&:hover .slider-arrow {
+			border-color: @color1;
+		}
 	}
 	
 	&-arrow {
