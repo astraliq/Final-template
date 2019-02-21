@@ -62,7 +62,6 @@ a {
 	text-decoration: none;
 }
 
-
 .header {
 	margin: 0 auto;
 	position: absolute;
@@ -80,8 +79,17 @@ a {
 		display: -ms-flex;
 		display: -o-flex;
 		display: flex;
+		
 		&-img {
-			height: 60px;
+			fill: @colorTextLight;
+			stroke: @colorTextLight;
+		}
+		
+		&:hover .header-name,
+		&:hover .header-logo-img {
+			fill: @color1;
+			stroke: @color1;
+			color: @color1
 		}
 	}
 	&-name {
@@ -103,13 +111,23 @@ a {
 		padding: 0;
 		&-li {
 			margin: 0 1.4vw 0 0;
+			&-icon {
+				fill: @colorTextLight;
+				stroke: @colorTextLight;
+			}
 		}
 		&-li a {
 			color: @colorTextLight;
 			text-transform: capitalize;
 			font-size: 14px;
+			
 			&:hover {
 				color: @color1;
+			}
+			
+			&:hover .header-menu-li-icon {
+				fill: @color1;
+				stroke: @color1;
 			}
 		}
 		&-li:nth-child(9),
@@ -132,15 +150,28 @@ a {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: center;
-	align-content: stretch;
+	justify-content: space-around;
 	flex-wrap: wrap;
 	padding: 283px 0 0 0;
 	box-sizing: border-box;
 	
+	&-main {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: nowrap;
+		width: 100%;
+		justify-content: space-around;
+	}
+	
 	&-control {
 		align-self: center;
 		display: block;
+		&:hover .slider-arrow {
+			border-color: @color1;
+		}
 	}
 	
 	&-arrow {
@@ -176,7 +207,6 @@ a {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		width: 77%;
 		h2 {
 			.mixin_font(@font2; 36px; 400; @colorTextLight;);
 			margin: 20px 0 10px 0;
@@ -219,8 +249,8 @@ a {
 	}
 	&-btn {
 		display: block;
-		height: 53px;
-		width: 170px;
+		min-height: 53px;
+		min-width: 170px;
 		border-radius: 5px;
 		background-color: @color1;
 		color: @colorTextLight;
@@ -230,7 +260,7 @@ a {
 		outline: none;
 		border-bottom: 4px solid #736357;
 		text-align: center;
-		padding: 16px 0 0 0;
+		padding: 16px 5px 0 5px;
 		margin: 30px 0 0 0;
 		box-sizing: border-box;
 		
@@ -316,4 +346,89 @@ a {
 			border-bottom: 3px solid @color1;
 		}
 	}
+}
+
+.realization {
+	min-height: 700px;
+	padding: 75px 0 500px 0;
+	background-color: #fbfaf8;
+	background: url(../img/realization/browser-center.jpg) no-repeat,
+				url(../img/realization/browser-right.jpg) no-repeat,
+				url(../img/realization/browser-left.jpg) no-repeat;
+	background-position: 50% 100%, 70% 100%, 30% 100%;
+	box-sizing: border-box;
+	
+	h3 {
+		margin: 0 auto 10px 0;
+		.mixin_font(@font2; 30px; 700; @colorTextDark; center;)
+	}
+	
+	p {
+		margin: 0  auto;
+		width: 40%;
+		line-height: 30px;
+		.mixin_font(@font1; 16px; 300; @colorTextDark; center;)
+	}
+}
+
+.text_boxes {
+	min-height: 150px;
+	background: -moz-linear-gradient(45deg, rgba(33,27,25,1) 0%, rgba(77,51,39,1) 100%); /* ff3.6+ */
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(33,27,25,1)), color-stop(100%, rgba(77,51,39,1))); /* safari4+,chrome */
+	background: -webkit-linear-gradient(45deg, rgba(33,27,25,1) 0%, rgba(77,51,39,1) 100%); /* safari5.1+,chrome10+ */
+	background: -o-linear-gradient(45deg, rgba(33,27,25,1) 0%, rgba(77,51,39,1) 100%); /* opera 11.10+ */
+	background: -ms-linear-gradient(45deg, rgba(33,27,25,1) 0%, rgba(77,51,39,1) 100%); /* ie10+ */
+	background: linear-gradient(45deg, rgba(33,27,25,1) 0%, rgba(77,51,39,1) 100%); /* w3c */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d3327', endColorstr='#211b19',GradientType=1 ); /* ie6-9 */
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-sizing: border-box;
+	padding: 0 18vw 0 19vw;
+	
+	span {
+		.mixin_font(@font2; 28px; 500; @colorTextLight; left;);
+	}
+	
+	p {
+		margin: 10px 0;
+		line-height: 30px;
+		.mixin_font(@font1; 18px; 300; @colorTextLight; left;)
+	}
+	&-btn {
+		display: block;
+		padding: 5px;
+		min-height: 50px;
+		min-width: 170px;
+		.mixin_font(@font2; 14px; 700; @colorTextLight; center;);
+		border-radius: 3px;
+		background-color: #998675;
+		text-transform: uppercase;
+		outline: none;
+		border-bottom: 4px solid #736357;
+		padding: 16px 5px 0 5px;
+		margin: 0;
+		box-sizing: border-box;
+		
+		&:hover {
+			background-color: darken(@color1, 20%);
+			color: darken(@colorTextLight, 20%);
+		}
+		
+		&:active {
+			transform: scale(.95);
+			transition: 0.2s;
+		}
+	}
+}
+
+.text_boxes-span:before {
+	content: "Waxom";
+	color: @color1;
+	display: inline-block;
+	margin: 0 10px 0 0;
 }
