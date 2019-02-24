@@ -312,6 +312,7 @@ header {
 	display: -o-flex;
 	display: flex;
 	justify-content: center;
+	align-items: center;
 	
 	&-icon {
 		fill: @colorTextDark;
@@ -319,8 +320,8 @@ header {
 	}
 	
 	&-block {
-		width: 285px;
-		min-height: 250px;
+		min-width: 210px;
+		max-width: 285px;
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -329,6 +330,7 @@ header {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		flex-shrink: 2;
 		margin: 0 10px 0 10px;
 		
 		h5 {
@@ -372,7 +374,7 @@ header {
 .realization {
 	min-height: 700px;
 	padding: 75px 0 500px 0;
-	background-color: #fbfaf8;
+	background-color: red; //#fbfaf8;
 	background: url(../img/realization/browser-center.jpg) no-repeat,
 				url(../img/realization/browser-right.jpg) no-repeat,
 				url(../img/realization/browser-left.jpg) no-repeat;
@@ -409,7 +411,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	box-sizing: border-box;
-	padding: 0 400px 0 400px;
+	padding: 0 20% 0 20%;
 	
 	span {
 		.mixin_font(@font2-sembold; 28px; 500; @colorTextLight; left;);
