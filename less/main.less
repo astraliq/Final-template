@@ -72,6 +72,7 @@ a {
 	display: -o-flex;
 	display: flex;
 	justify-content: center;
+	
 	&-logo {
 		margin: 38px 0 0 0.9vw;
 		display: -webkit-flex;
@@ -92,6 +93,7 @@ a {
 			color: @color1
 		}
 	}
+	
 	&-name {
 		text-transform: capitalize;
 		display: block;
@@ -100,6 +102,30 @@ a {
 		color: @colorTextLight;
 		margin: 13px 0 0 0;
 	}
+	
+	&-btn {
+		border: none;
+		outline: none;
+		background-color: transparent;
+		height: 25px;
+		margin: 50px 20px 0 0;
+		
+		& {
+			fill: @colorTextLight;
+			stroke: @colorTextLight;
+		}
+		
+		&:hover &-icon {
+			fill: @color1;
+			stroke: @color1;
+		}
+		
+		&:active &-icon {
+			fill: @colorTextLight;
+			stroke: @colorTextLight;
+		}
+	}
+	
 	&-menu {
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -107,7 +133,7 @@ a {
 		display: -o-flex;
 		display: flex;
 		list-style-type: none;
-		margin: 57px 0 0 11.2vw;
+		margin: 57px 1.2vw 0 11.2vw;
 		padding: 0;
 		
 		&-li {
@@ -131,10 +157,6 @@ a {
 				fill: @color1;
 				stroke: @color1;
 			}
-		}
-		&-li:nth-child(9),
-		&-li:nth-child(10) {
-			margin: 0 -10px 0 39px;
 		}
 	}
 }
@@ -171,33 +193,28 @@ a {
 	&-control {
 		align-self: center;
 		display: block;
-		&:hover .slider-arrow {
+		background: none;
+		border: none;
+		outline: none;	
+		
+		&:before {
+			content: "";
+			display: block;
+			width: 50px;
+			height: 50px;
+			border-left: 2px solid @colorTextLight;
+			border-bottom: 2px solid @colorTextLight;
+		}
+
+		&:hover:before {
 			border-color: @color1;
+		}
+
+		&:active:before {
+			border-color: @colorTextLight;
 		}
 	}
 	
-	&-arrow {
-		width: 50px;
-		height: 50px;
-		border-left: 2px solid @colorTextLight;
-		border-bottom: 2px solid @colorTextLight;
-		
-		&-left {
-			-webkit-transform: rotate(45deg);
-			-moz-transform: rotate(45deg);
-			-o-transform: rotate(45deg);
-			-ms-transform: rotate(45deg);
-			transform: rotate(45deg);
-		}
-		
-		&-right {
-			-webkit-transform: rotate(-135deg);
-			-moz-transform: rotate(-135deg);
-			-o-transform: rotate(-135deg);
-			-ms-transform: rotate(-135deg);
-			transform: rotate(-135deg);
-		}
-	}
 	
 	&-slogan {
 		align-self: center;
@@ -242,9 +259,9 @@ a {
 			border-radius: 50%;
 			background-color: @colorBGimg;
 			margin: 0 5px;
-			box-sizing: border-box;
+			border: 2px solid transparent;
 			&:hover {
-				background-color: @colorBGimg;
+				background-color: black;
 				border: 2px solid @color1;
 			}
 		}
@@ -278,12 +295,20 @@ a {
 	}
 }
 
-.left-arrow {
-	padding: 50px 20px 50px 50px;
+.left-arrow:before {
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
 }
 
-.right-arrow {
-	padding: 50px 50px 50px 20px;
+.right-arrow:before {
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	transform: rotate(-135deg);
 }
 
 .services {
@@ -338,14 +363,17 @@ a {
 			stroke: @color1;
 		}
 		
-		&-line {
+		&-txt:after {
+			content: "";
+			display: block;
 			width: 70px;
-			margin: 0 auto;
-			border-bottom: 3px solid #f1eee9;
+			height: 3px;
+			background-color: #f1eee9;
+			margin: 30px auto 0 auto;
+			
 		}
-		
-		&:hover .services-block-line {
-			border-bottom: 3px solid @color1;
+		&-txt:hover:after {
+			background-color: @color1;
 		}
 	}
 }
