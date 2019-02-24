@@ -9,15 +9,18 @@
 * {
 	font-family: @font1-reg;
 	outline: none;
+	max-width: @mainWidth;
 }
 
 html {
 	background-color: @colorBG;
+	margin: 0 auto;
+	max-width: @mainWidth;
 }
 
 body {
 	margin: 0 auto;
-	width: @mainWidth;
+	max-width: 100%;
 }
 
 h3 {
@@ -37,10 +40,15 @@ a {
 	text-decoration: none;
 }
 
+main {
+	width: 100%;
+}
+
 .header {
 	margin: 0 auto;
 	position: absolute;
-	width: 100%;
+	z-index: 100;
+	width: @mainWidth;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -108,11 +116,11 @@ a {
 		display: -o-flex;
 		display: flex;
 		list-style-type: none;
-		margin: 57px 1.2vw 0 11.2vw;
+		margin: 57px 15px 0 250px;
 		padding: 0;
 		
 		&-li {
-			margin: 0 1.4vw 0 0;
+			margin: 0 20px 0 0;
 			&-icon {
 				fill: @colorTextLight;
 				stroke: @colorTextLight;
@@ -211,6 +219,7 @@ a {
 		}
 		p {
 			.mixin_font(@font2-lt; 16px; 300; @colorTextLight;);
+			line-height: 24px;
 			width: 570px;
 		}
 	}
@@ -391,7 +400,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	box-sizing: border-box;
-	padding: 0 18vw 0 19vw;
+	padding: 0 400px 0 400px;
 	
 	span {
 		.mixin_font(@font2-sembold; 28px; 500; @colorTextLight; left;);

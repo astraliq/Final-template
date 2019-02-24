@@ -67,13 +67,16 @@
 * {
   font-family: 'montserratregular', Arial, sans-serif;
   outline: none;
+  max-width: 1920px;
 }
 html {
   background-color: #ffffff;
+  margin: 0 auto;
+  max-width: 1920px;
 }
 body {
   margin: 0 auto;
-  width: 100%;
+  max-width: 100%;
 }
 h3 {
   font-size: 30px;
@@ -89,10 +92,14 @@ video {
 a {
   text-decoration: none;
 }
+main {
+  width: 100%;
+}
 .header {
   margin: 0 auto;
   position: absolute;
-  width: 100%;
+  z-index: 100;
+  width: 1920px;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -150,11 +157,11 @@ a {
   display: -o-flex;
   display: flex;
   list-style-type: none;
-  margin: 57px 1.2vw 0 11.2vw;
+  margin: 57px 15px 0 250px;
   padding: 0;
 }
 .header-menu-li {
-  margin: 0 1.4vw 0 0;
+  margin: 0 20px 0 0;
 }
 .header-menu-li-icon {
   fill: #f3f3f3;
@@ -254,6 +261,7 @@ a {
   font-weight: 300;
   color: #f3f3f3;
   text-align: center;
+  line-height: 24px;
   width: 570px;
 }
 .slider-nav {
@@ -427,7 +435,7 @@ a {
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
-  padding: 0 18vw 0 19vw;
+  padding: 0 400px 0 400px;
 }
 .text_boxes span {
   font-family: 'ralewaysemibold', Arial, sans-serif;
