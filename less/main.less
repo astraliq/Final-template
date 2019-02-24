@@ -44,11 +44,26 @@ main {
 	width: 100%;
 }
 
-.header {
+header {
 	margin: 0 auto;
-	position: absolute;
-	z-index: 100;
-	width: @mainWidth;
+	width: 100%;
+	background-color: @colorBGimg;
+	background: url(../img/header/slider_bg.jpg) no-repeat;
+	background-size: cover;
+	min-height: 1024px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-content: space-between;
+
+}
+
+.header {
+	width: 100%;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -136,7 +151,7 @@ main {
 				color: @color1;
 			}
 			
-			&:hover .header-menu-li-icon {
+			&:hover .header-head-menu-li-icon {
 				fill: @color1;
 				stroke: @color1;
 			}
@@ -145,13 +160,7 @@ main {
 }
 
 .slider {
-	margin: 0 auto;
-	min-height: 1024px;
 	width: 100%;
-	background-color: @colorBGimg;
-	background: url(../img/header/slider_bg.jpg) no-repeat;
-	background-size: cover;
-	background-position: top center;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
@@ -159,7 +168,6 @@ main {
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
-	padding: 283px 0 0 0;
 	box-sizing: border-box;
 	
 	&-main {
@@ -170,6 +178,7 @@ main {
 		display: flex;
 		flex-wrap: nowrap;
 		width: 100%;
+		margin: 0 0 300px 0;
 		justify-content: space-around;
 	}
 	
