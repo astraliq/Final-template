@@ -685,3 +685,77 @@ header {
 .projects-btn_load:active {
   color: black;
 }
+.video {
+  width: 100%;
+  height: 705px;
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video-src {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.video-poster {
+  width: 100%;
+  padding: 0 30%;
+}
+.video-poster-btn {
+  margin: 0 auto;
+  outline: none;
+  border: none;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: .1s;
+}
+.video-poster-btn-icon {
+  fill: #f3f3f3;
+  stroke: #f3f3f3;
+  margin: auto;
+}
+.video-poster-btn:hover {
+  transform: scale(1.1);
+  transition: .3s;
+}
+.video-poster-btn:active {
+  transform: scale(1);
+  transition: .1s;
+}
+.video-poster-name {
+  font-family: 'ralewaymedium', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: 500;
+  color: #f3f3f3;
+  text-align: center;
+  margin: 30px 0 0 0;
+}
+.video-poster-desc {
+  font-family: 'montserratlight', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #f3f3f3;
+  text-align: center;
+  line-height: 30px;
+}
+.video-poster-drn {
+  display: block;
+  font-family: 'montserratregular', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  color: #c7b299;
+  text-align: center;
+}
