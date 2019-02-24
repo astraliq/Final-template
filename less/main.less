@@ -468,6 +468,8 @@ header {
 	align-content: flex-start;
 	min-height: 1160px;
 	position: relative;
+	box-sizing: border-box;
+	padding: 0 0 50px 0;
 	
 	&-h3 {
 		width: 100%;
@@ -654,17 +656,19 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #828384;
 	
 	&-src {
 		position: absolute;
 		top: 0;
 		left: 0;
-		z-index: -1;
+		z-index: 1;
 	}
 	
 	&-poster {
 		width: 100%;
 		padding: 0 30%;
+		z-index: 2;
 		
 		&-btn {
 			margin: 0 auto;
@@ -699,7 +703,7 @@ header {
 			
 		}
 		
-		&-name {
+		&-h3 {
 			.mixin_font(@font2-md; 30px; 500; @colorTextLight; center;);
 			margin: 30px 0 0 0;
 		}
@@ -712,6 +716,36 @@ header {
 		&-drn {
 			display: block;
 			.mixin_font(@font1-reg; 14px; 300; @color1; center;);
+		}
+	}
+}
+
+.mobile {
+	width: 100%;
+	height: 695px;
+	background-color: @colorBG;
+	background: url(../img/mobile/iPhone_in_hand.png) no-repeat;
+	background-position: 30% 100%;
+	padding: 180px 20% 0 45%;
+	box-sizing: border-box;
+	
+	&-h3 {
+		.mixin_font(@font2-sembold; 30px; 600; @colorTextDark; left;);
+		margin: 0 0 30px 0;
+	}
+	
+	&-desc {
+		.mixin_font(@font1-lt; 16px; 300; @colorTextDark; left;);
+		margin: 0 0 50px 0;
+		line-height: 30px;
+	}
+	
+	&-ul {
+		margin: 0 0 0 80px;
+		
+		&-li {
+			list-style-type: none;
+			.mixin_font(@font1-lt; 16px; 300; @colorTextDark; left;);
 		}
 	}
 }
