@@ -130,10 +130,19 @@ header {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+.header-nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
 }
 .header-logo {
-  margin: 38px 0 0 0.9vw;
+  margin: 38px 0 0 0;
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
@@ -164,6 +173,7 @@ header {
   background-color: transparent;
   height: 25px;
   margin: 50px 20px 0 0;
+  cursor: pointer;
   fill: #f3f3f3;
   stroke: #f3f3f3;
 }
@@ -182,7 +192,7 @@ header {
   display: -o-flex;
   display: flex;
   list-style-type: none;
-  margin: 57px 15px 0 250px;
+  margin: 57px 15px 0 0;
   padding: 0;
 }
 .header-menu-li {
@@ -232,6 +242,7 @@ header {
   background: none;
   border: none;
   outline: none;
+  cursor: pointer;
 }
 .slider-control:before {
   content: "";
@@ -565,6 +576,7 @@ header {
   font-weight: 300;
   color: #8c8c8c;
   text-align: center;
+  cursor: pointer;
 }
 .projects-btn_sort:hover {
   background-color: #c7b299;
@@ -685,6 +697,7 @@ header {
   padding: 10px 5px 5px 5px;
   margin: 40px 0 0 0;
   box-sizing: border-box;
+  cursor: pointer;
 }
 .projects-btn_load:hover {
   background-color: #736357;
@@ -732,6 +745,7 @@ header {
   height: 100px;
   border-radius: 50%;
   transition: .1s;
+  cursor: pointer;
 }
 .video-poster-btn-icon {
   fill: #f3f3f3;
@@ -1109,6 +1123,7 @@ header {
   margin: 20px 5px;
   box-sizing: border-box;
   position: relative;
+  cursor: pointer;
 }
 .recent_posts-btn:after {
   content: "";

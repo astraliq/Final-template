@@ -69,10 +69,20 @@ header {
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	align-content: space-between;
+	
+	&-nav{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+	}
 	
 	&-logo {
-		margin: 38px 0 0 0.9vw;
+		margin: 38px 0 0 0;
 		display: -webkit-flex;
 		display: -moz-flex;
 		display: -ms-flex;
@@ -107,6 +117,7 @@ header {
 		background-color: transparent;
 		height: 25px;
 		margin: 50px 20px 0 0;
+		cursor: pointer;
 		
 		& {
 			fill: @colorTextLight;
@@ -131,7 +142,7 @@ header {
 		display: -o-flex;
 		display: flex;
 		list-style-type: none;
-		margin: 57px 15px 0 250px;
+		margin: 57px 15px 0 0;
 		padding: 0;
 		
 		&-li {
@@ -188,6 +199,7 @@ header {
 		background: none;
 		border: none;
 		outline: none;	
+		cursor: pointer;
 		
 		&:before {
 			content: "";
@@ -508,6 +520,7 @@ header {
 		color: @color3;
 		margin: 0 5px;
 		.mixin_font(@font1-lt; 14px; 300; @color3; center;);
+		cursor: pointer;
 		
 		&:hover {
 			background-color: @color1;
@@ -633,6 +646,7 @@ header {
 		padding: 10px 5px 5px 5px;
 		margin: 40px 0 0 0;
 		box-sizing: border-box;
+		cursor: pointer;
 		
 		&:hover {
 			background-color: #736357;
@@ -685,6 +699,7 @@ header {
 			height: 100px;
 			border-radius: 50%;
 			transition: .1s;
+			cursor: pointer;
 			
 			&-icon {
 				fill: @colorTextLight;
@@ -1035,6 +1050,7 @@ header {
 		margin: 20px 5px;
 		box-sizing: border-box;
 		position: relative;
+		cursor: pointer;
 		
 		&:after {
 			content: "";
