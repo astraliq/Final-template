@@ -1293,5 +1293,55 @@ footer {
 .copyright {
 	background-color: #111111;
 	min-height: 110px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 	
+	&_block {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+	}
+	
+	&-list {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		
+		li {
+			display: inline-block;
+			.mixin_font(@font1-lt; 13px; 300; #474747; left;);
+			padding: 0 15px 0 15px;
+			border-right: 1px solid #474747;
+			
+			&:last-child {
+				border: none;
+			}
+		}
+		
+		&-name {
+			color: #7b7b7b;
+			
+			&:hover {
+				color: @color1;
+			}
+		}
+		
+		&-link {
+			color: #474747;
+			
+			&:hover {
+				color: @color1;
+			}
+		}
+		
+	}
 }
