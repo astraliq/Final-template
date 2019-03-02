@@ -475,7 +475,7 @@ header {
   box-sizing: border-box;
   padding: 0 20% 0 20%;
 }
-.text_boxes span {
+.text_boxes-span {
   font-family: 'ralewaysemibold', Arial, sans-serif;
   font-size: 28px;
   font-weight: 500;
@@ -1459,7 +1459,7 @@ footer {
   .services-block {
     margin: 0 0 20px 0;
   }
-  .text_boxes span {
+  .text_boxes-span {
     font-size: 17px;
   }
   .text_boxes p {
@@ -1571,5 +1571,27 @@ footer {
   }
   .header-btn {
     display: none;
+  }
+  .services {
+    flex-wrap: wrap;
+    padding: 20px 0;
+  }
+  .services-block {
+    margin: 0 10px 20px 10px;
+    min-width: 110px;
+    max-width: 230px;
+  }
+  .realization {
+    min-height: 450px;
+    padding: 15px 0 200px 0;
+    background-size: 70%;
+  }
+  .text_boxes {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .text_boxes-span {
+    text-align: center;
+    display: block;
   }
 }
