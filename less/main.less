@@ -9,7 +9,6 @@
 * {
 	font-family: @font1-reg;
 	outline: none;
-	max-width: @mainWidth;
 }
 
 html {
@@ -180,12 +179,14 @@ header {
 
 .slider {
 	width: 100%;
+	height: 640px;
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	justify-content: space-around;
+	align-content: space-between;
 	flex-wrap: wrap;
 	box-sizing: border-box;
 	
@@ -228,7 +229,7 @@ header {
 	}
 	
 	
-	&-slogan {
+	&-content {
 		align-self: center;
 		display: -webkit-flex;
 		display: -moz-flex;
@@ -241,10 +242,12 @@ header {
 		h2 {
 			.mixin_font(@font2-reg; 36px; 400; @colorTextLight;);
 			margin: 20px 0 10px 0;
+			line-height: 50px;
 		}
 		span {
 			.mixin_font(@font2-bold; 52px; 700; @colorTextLight;);
 			margin:  0 10px 0;
+			line-height: 50px;
 		}
 		p {
 			.mixin_font(@font2-lt; 16px; 300; @colorTextLight;);
@@ -291,7 +294,7 @@ header {
 		outline: none;
 		border-bottom: 4px solid #736357;
 		text-align: center;
-		padding: 16px 5px 0 5px;
+		padding: 25px 5px 0 5px;
 		margin: 30px 0 0 0;
 		box-sizing: border-box;
 		
@@ -305,22 +308,6 @@ header {
 			transition: 0.2s;
 		}
 	}
-}
-
-.left-arrow:before {
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	-ms-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.right-arrow:before {
-	-webkit-transform: rotate(-135deg);
-	-moz-transform: rotate(-135deg);
-	-o-transform: rotate(-135deg);
-	-ms-transform: rotate(-135deg);
-	transform: rotate(-135deg);
 }
 
 .services {
